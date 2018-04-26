@@ -1,0 +1,15 @@
+# IDEs
+.vscode/
+.idea/
+.atom/
+
+.DS_Store
+
+# Flutter
+.flutter-plugins
+.dart_tool/
+build/
+ios/.generated/
+.pub/
+.packages
+packages
