@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import '../managers/sms.dart';
 
 class AlertPage extends StatelessWidget {
   @override
@@ -22,7 +23,6 @@ class AlertPage extends StatelessWidget {
     );
 }
 
-/// TODO: make the area click to the whole screen.
 class AlertButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) =>
@@ -30,7 +30,7 @@ class AlertButton extends StatelessWidget {
       color: Colors.red,
       shape: CircleBorder(),
       padding: EdgeInsets.all(50.0),
-      onPressed: _sendSMS(context),
+      onPressed: SMSManager.sendFunc(context),
       child: Column(
         children: <Widget>[
           const Icon(
@@ -44,16 +44,4 @@ class AlertButton extends StatelessWidget {
         ],
       ),
     );
-
-  /// It's just a mock. SMS sending not implementing yet.
-  _sendSMS(BuildContext context) =>
-    () {
-      showDialog<AlertDialog>(
-        context: context,
-        builder: (BuildContext context) => new AlertDialog(
-          title: new Text("Alert"),
-          content: new Text("It's just a mock at the moment. SMS NOT SENT."),
-        ),
-      );
-    };
 }
