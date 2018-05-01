@@ -5,18 +5,15 @@
 import 'package:flutter/material.dart';
 import 'pages/alert.dart';
 
-run() => runApp(new App());
-
 class App extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'beetlefinder',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: new AlertPage(),
+      home: AlertPage(),
     );
   }
 }

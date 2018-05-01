@@ -37,7 +37,7 @@ class AlertButton extends StatelessWidget {
             Icons.wifi_tethering,
             size: 200.0,
           ),
-          const Text(
+          Text(
             "Alert",
             textScaleFactor: 3.0,
           ),

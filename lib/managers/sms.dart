@@ -10,9 +10,9 @@ class SMSManager {
     () {
       showDialog<AlertDialog>(
         context: context,
-        builder: (BuildContext context) => new AlertDialog(
-          title: new Text("Alert"),
-          content: new Text("It's just a mock at the moment. SMS NOT SENT."),
+        builder: (BuildContext context) => AlertDialog(
+          title: Text("Alert"),
+          content: Text("It's just a mock at the moment. SMS NOT SENT."),
         ),
       );
     };
